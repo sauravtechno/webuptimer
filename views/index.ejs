@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Status</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+        .status-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .status-box {
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            padding: 20px;
+            margin: 10px;
+            width: 80%;
+            max-width: 600px;
+            text-align: center;
+            background-color: #f9f9f9;
+        }
+        .status-box h2 {
+            margin: 0 0 10px 0;
+            color: #333;
+        }
+        .status-box p {
+            margin: 5px 0;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="status-container">
+        <div class="status-box">
+            <h2>Website Status: <%= status %></h2>
+            <p><strong>Current Uptime:</strong> <%= formatDuration(currentUptime) %></p>
+            <p><strong>Max Uptime:</strong> <%= formatDuration(maxUptime) %></p>
+            <p><strong>Downtime:</strong> <%= formatDuration(downtime) %></p>
+        </div>
+    </div>
+</body>
+</html>
